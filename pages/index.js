@@ -83,7 +83,9 @@ export default function Home() {
               className="mr-2" 
               checked={ item.isDone }
               onChange={ () => done( item.id ) }/>
+            <span className={ item.isDone ? 'line-through text-gray-500' : ''}>
               { item.text }
+            </span>
               <button className="ml-2 text-xs text-red-500"
                 onClick={ () => removeItem( item.id ) }>
                 [삭제]
